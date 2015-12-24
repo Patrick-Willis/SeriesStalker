@@ -1,6 +1,6 @@
 Feature: Hello World
 
-Scenario: Launching the application should respond with a "Hello World!"
-Given a User
-When the User logs into the application
-Then the User should receive a "Hello World!"
+Scenario: Launching the application should respond with a "Hello Patrick!"
+Given a user "Patrick"
+When the user logs into the application
+Then the user should receive a "Hello Patrick!"

@@ -1,3 +1,4 @@
+import com.google.gson.Gson;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -10,12 +11,11 @@ import static org.junit.Assert.*;
 @RunWith(MockitoJUnitRunner.class)
 public class SeriesStalkerTest {
 
-    @Mock User user;
+    private static final String USERNAME = "username";
 
     @Test
     public void respond_with_hello_world_when_a_user_logs_in(){
-        SeriesStalker seriesStalker = new SeriesStalker();
-        String response = seriesStalker.login(user);
-        assertThat(response, is(equalTo("Hello World!")));
+        String response = SeriesStalker.login(USERNAME);
+        assertThat(response, is(equalTo("Hello " + USERNAME + "!")));
     }
 }
