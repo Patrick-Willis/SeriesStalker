@@ -1,0 +1,11 @@
+language: java
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: KWO+ehLEbt1fzWmepgti3Ddnb+CJY1QnRB0cqRe+vYFMMX6TLrMgIYrpYv1P36iss7tI6XwWsOLcEE2MY9CgGIORLodF6C+5lhQeLQ458OFwHQCQ05qMyvBJjhf2HoucGRIFqNGvbqfNTVP2Rq5RPhHPMgttXhLaa9F9eUtdrsiEGFDol31XVBGz9sr4dWY8PtpuHBFKc7RYX4JDJ5wlH+4zrq00WRzFmyYW5D0fQ+LgVnMmYSI45EKgmHkMyAsX6uUUAZmLD0BB29ctSNJnKmaeCivbP33BwcjoW17UE5j1lVKquIYZqxVSncmGIW7PTaMmHdTfHodGB84P3Nsl9poyzsBIFDEbZezyUHSSZWYGMPMS7ZNQUT5OhZesYP/ASwdDRfXuxRTNi6IAQPlvntJSFarhxIKVWon8XIIpbWR00Jf8ZpbvRh4tNpSWmazW7aF+AooW7buFAAOc+T2Ha7ZgPs9Df/R33YH0k5W9qsk2p4N1Q2Cwkm4HcihucF8C9Akl/yitVMTAxtWjUAjj7X9/fL93AaLVdWQ8CC9mhNXM3EwkrejTpVhb+9wgnvwEDGGEfIxNluzn7GR/ua0Q/1bFLtvbiY/IPh1v+/k79zllVxMThb9EKAk2Y9vjGi2eOXw8OQhfwjxx657ao6oStBhYSAd8ueyBSDFX6d6Oz9U=
+  app: SeriesStalker
+  on:
+    repo: Patrick-Willis/SeriesStalker
