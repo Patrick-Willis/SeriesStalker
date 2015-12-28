@@ -15,5 +15,5 @@ deploy:
   on:
     repo: Patrick-Willis/SeriesStalker
 
-after-deploy:
+after_deploy:
   - script: "mvn -f ./AcceptanceTests verify -Durl=https://seriesstalker.herokuapp.com"
