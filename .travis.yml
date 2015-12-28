@@ -1,9 +1,12 @@
 language: java
+
 jdk:
   - oraclejdk8
+
 branches:
   only:
   - master
+
 deploy:
   provider: heroku
   api_key:
@@ -11,3 +14,6 @@ deploy:
   app: seriesstalker
   on:
     repo: Patrick-Willis/SeriesStalker
+
+after-deploy:
+  - script: "mvn -f ./AcceptanceTests verify"
