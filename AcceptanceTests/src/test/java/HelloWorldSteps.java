@@ -8,7 +8,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class HelloWorldSteps implements En {
 
-    public static final String HOME_PAGE_ADDRESS = "http://localhost:4567";
+    public String url = System.getProperty("url");
     public static WebDriver driver = new HtmlUnitDriver();
 
     private String userName;
@@ -18,7 +18,7 @@ public class HelloWorldSteps implements En {
             this.userName = userName;
         });
         When("the user logs into the application", () -> {
-            driver.get(HOME_PAGE_ADDRESS + ("?user=" + userName));
+            driver.get(url + ("?user=" + userName));
         });
         Then("^the user should receive a \"([^\"]*)\"$", (String expected) -> {
             String response = new Gson().fromJson(driver.getPageSource(), String.class);
